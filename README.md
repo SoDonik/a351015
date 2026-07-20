@@ -9,9 +9,7 @@ The note gives an exact formula for the binary length of a(n) — the partial su
 gives an exact algorithm, extends the sequence with terms through a(16), and derives
 log₂ a(n) ∼ n² / (2 log n).
 
-The terms a(10)–a(16) are contributed to OEIS A351015; larger terms are computed
-but rest on the length theorem proved in the note (there is no brute-force check at
-that scale).
+Terms a(10)–a(16) are contributed to OEIS A351015. The note computes terms through a(20); these larger terms rest on the length theorem (Theorem 2.2) — there is no brute-force check at that scale, and a(17)–a(20) are cross-checked by an independent verifier included here.
 
 ## Files
 - `paper.pdf` — the note.

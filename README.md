@@ -5,9 +5,7 @@ Companion code and preprint for a note on **OEIS [A351015](https://oeis.org/A351
 has exactly n distinct runs.
 
 The note gives an exact formula for the binary length of a(n) — the partial sums of
-[A061017](https://oeis.org/A061017) — shows the lower bound is always attained,
-gives an exact algorithm, extends the sequence with terms through a(16), and derives
-log₂ a(n) ∼ n² / (2 log n).
+[A061017](https://oeis.org/A061017) — proves the lower bound is always attained, gives an exact algorithm, and derives log₂ a(n) ∼ n² / (2 log n).
 
 Terms a(10)–a(16) are contributed to OEIS A351015. The note computes terms through a(20); these larger terms rest on the length theorem (Theorem 2.2) — there is no brute-force check at that scale, and a(17)–a(20) are cross-checked by an independent verifier included here.
 

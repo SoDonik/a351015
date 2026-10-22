@@ -3,8 +3,7 @@
 This package implements the anonymous referee's polynomial construction for
 [OEIS A351015](https://oeis.org/A351015). The construction tests whether a binary
 prefix has a completion of minimum encoding length and then chooses the least
-possible next bit. OpenAI Codex prepared the new implementation and additional
-validation scripts for author review. The producer header records its
+possible next bit. The producer header records its
 attribution and mathematical dependencies.
 
 The four programs in `code/` are copied without changes from the reviewed

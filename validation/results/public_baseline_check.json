@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "public_commit": "74bed98a778c46017ad676e892b4309b35d57015",
+  "checks": [
+    {
+      "release_path": "code/a351015_exact.py",
+      "public_source_url": "https://raw.githubusercontent.com/SoDonik/a351015/74bed98a778c46017ad676e892b4309b35d57015/a351015_exact.py",
+      "sha256": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
+      "byte_identical": true
+    },
+    {
+      "release_path": "code/a351015_fast_exact.cpp",
+      "public_source_url": "https://raw.githubusercontent.com/SoDonik/a351015/74bed98a778c46017ad676e892b4309b35d57015/a351015_fast_exact.cpp",
+      "sha256": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95",
+      "byte_identical": true
+    },
+    {
+      "release_path": "code/a351015_independent_verify.py",
+      "public_source_url": "https://raw.githubusercontent.com/SoDonik/a351015/74bed98a778c46017ad676e892b4309b35d57015/a351015_independent_verify.py",
+      "sha256": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
+      "byte_identical": true
+    }
+  ]
+}

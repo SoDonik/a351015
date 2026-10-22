@@ -1,0 +1,1689 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-21T11:00:42.868584+00:00",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "command": [
+    "python3",
+    "validation/validate_revision.py",
+    "--dp-through",
+    "12",
+    "--raw-through",
+    "7",
+    "--output",
+    "validation/results/validation.json"
+  ],
+  "working_directory": ".",
+  "path_convention": "Commands use package-relative paths and python3 as the runtime alias; python records the actual runtime version.",
+  "source_sha256": {
+    "validation/validate_revision.py": "93c410dcdbc9821feef355fa4fdcdfae584593e72d83d5409d6e2cc7165781c3",
+    "code/a351015_exact.py": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
+    "code/a351015_independent_verify.py": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
+    "code/a351015_polynomial.py": "4b5a96c6349fc599c54baffe50037a93bf024c0be9ee7fca1096a4df9f9d92f4",
+    "code/a351015_fast_exact.cpp": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95"
+  },
+  "checks": {
+    "original_programs_unchanged": {
+      "files": [
+        "a351015_exact.py",
+        "a351015_independent_verify.py",
+        "a351015_fast_exact.cpp"
+      ],
+      "comparison": "SHA-256 against the fixed public baseline",
+      "repository": "https://github.com/SoDonik/a351015",
+      "commit": "74bed98a778c46017ad676e892b4309b35d57015",
+      "source_sha256": {
+        "a351015_exact.py": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
+        "a351015_independent_verify.py": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
+        "a351015_fast_exact.cpp": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95"
+      }
+    },
+    "input_edges": {
+      "cases": 120,
+      "checks": [
+        "n=0: empty prefix",
+        "n=0: reject '0'",
+        "n=0: reject '00'",
+        "n=0: reject '01'",
+        "n=0: reject '0'",
+        "n=0: reject '1'",
+        "n=0: reject '1'",
+        "n=0: '2' raises ValueError",
+        "n=0: '10x' raises ValueError",
+        "n=0: '1 0' raises ValueError",
+        "n=0: '\\n' raises ValueError",
+        "n=0: '0x' raises ValueError",
+        "n=0: None raises TypeError",
+        "n=0: 1 raises TypeError",
+        "n=0: b'1' raises TypeError",
+        "n=0: ('1',) raises TypeError",
+        "n=1: empty prefix",
+        "n=1: reject '0'",
+        "n=1: reject '00'",
+        "n=1: reject '01'",
+        "n=1: reject '01'",
+        "n=1: reject '11'",
+        "n=1: reject '10'",
+        "n=1: '2' raises ValueError",
+        "n=1: '10x' raises ValueError",
+        "n=1: '1 0' raises ValueError",
+        "n=1: '\\n' raises ValueError",
+        "n=1: '0x' raises ValueError",
+        "n=1: None raises TypeError",
+        "n=1: 1 raises TypeError",
+        "n=1: b'1' raises TypeError",
+        "n=1: ('1',) raises TypeError",
+        "n=2: empty prefix",
+        "n=2: reject '0'",
+        "n=2: reject '00'",
+        "n=2: reject '01'",
+        "n=2: reject '0111'",
+        "n=2: reject '1111'",
+        "n=2: reject '1000'",
+        "n=2: '2' raises ValueError",
+        "n=2: '10x' raises ValueError",
+        "n=2: '1 0' raises ValueError",
+        "n=2: '\\n' raises ValueError",
+        "n=2: '0x' raises ValueError",
+        "n=2: None raises TypeError",
+        "n=2: 1 raises TypeError",
+        "n=2: b'1' raises TypeError",
+        "n=2: ('1',) raises TypeError",
+        "n=3: empty prefix",
+        "n=3: reject '0'",
+        "n=3: reject '00'",
+        "n=3: reject '01'",
+        "n=3: reject '011111'",
+        "n=3: reject '111111'",
+        "n=3: reject '100000'",
+        "n=3: '2' raises ValueError",
+        "n=3: '10x' raises ValueError",
+        "n=3: '1 0' raises ValueError",
+        "n=3: '\\n' raises ValueError",
+        "n=3: '0x' raises ValueError",
+        "n=3: None raises TypeError",
+        "n=3: 1 raises TypeError",
+        "n=3: b'1' raises TypeError",
+        "n=3: ('1',) raises TypeError",
+        "n=4: empty prefix",
+        "n=4: reject '0'",
+        "n=4: reject '00'",
+        "n=4: reject '01'",
+        "n=4: reject '011111111'",
+        "n=4: reject '111111111'",
+        "n=4: reject '100000000'",
+        "n=4: '2' raises ValueError",
+        "n=4: '10x' raises ValueError",
+        "n=4: '1 0' raises ValueError",
+        "n=4: '\\n' raises ValueError",
+        "n=4: '0x' raises ValueError",
+        "n=4: None raises TypeError",
+        "n=4: 1 raises TypeError",
+        "n=4: b'1' raises TypeError",
+        "n=4: ('1',) raises TypeError",
+        "n=5: empty prefix",
+        "n=5: reject '0'",
+        "n=5: reject '00'",
+        "n=5: reject '01'",
+        "n=5: reject '011111111111'",
+        "n=5: reject '111111111111'",
+        "n=5: reject '100000000000'",
+        "n=5: '2' raises ValueError",
+        "n=5: '10x' raises ValueError",
+        "n=5: '1 0' raises ValueError",
+        "n=5: '\\n' raises ValueError",
+        "n=5: '0x' raises ValueError",
+        "n=5: None raises TypeError",
+        "n=5: 1 raises TypeError",
+        "n=5: b'1' raises TypeError",
+        "n=5: ('1',) raises TypeError",
+        "PrefixOracle(-1) rejects",
+        "PrefixOracle(-10) rejects",
+        "PrefixOracle(1.5) rejects",
+        "PrefixOracle('2') rejects",
+        "PrefixOracle(None) rejects",
+        "exact_term(-1) rejects",
+        "exact_term(-10) rejects",
+        "exact_term(1.5) rejects",
+        "exact_term('2') rejects",
+        "exact_term(None) rejects",
+        "minimum_length(-1) rejects",
+        "minimum_length(-10) rejects",
+        "minimum_length(1.5) rejects",
+        "minimum_length('2') rejects",
+        "minimum_length(None) rejects",
+        "nonzero sentinel",
+        "negative count",
+        "previous label out of range",
+        "duplicate optional label",
+        "optional sentinel",
+        "optional label out of range"
+      ],
+      "additional_zero_checks": [
+        "empty structure",
+        "empty exact term",
+        "zero minimum length"
+      ],
+      "elapsed_seconds": 0.00012341700494289398
+    },
+    "suffix_counts": {
+      "cases": 3711,
+      "positive_label_counts": [
+        0,
+        4
+      ],
+      "each_multiplicity_inclusive": [
+        0,
+        4
+      ],
+      "previous_values": "0 and every positive label",
+      "reference": "Exhaustive recursive first-label ordering, memoized",
+      "elapsed_seconds": 0.005742750130593777
+    },
+    "boundary_counts": {
+      "cases": 9216,
+      "positive_labels": [
+        1,
+        2,
+        3
+      ],
+      "each_forced_multiplicity_inclusive": [
+        0,
+        3
+      ],
+      "optional_values": "Every subset of {1,2,3}",
+      "required": "-1 through optional_count + 1",
+      "previous_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reference": "Enumerate each boundary subset, then recursively order its labels",
+      "elapsed_seconds": 0.011735084000974894
+    },
+    "all_small_binary_prefixes": {
+      "raw_integer_scan_inclusive": [
+        1,
+        2047
+      ],
+      "n_inclusive": [
+        1,
+        5
+      ],
+      "total_binary_prefix_queries": 4687,
+      "definition": "All strings of every length 0 through L(n), including those starting 0",
+      "unfinished_part_example": {
+        "n": 2,
+        "prefix": "11",
+        "completion": "110"
+      },
+      "eventual_value_example": {
+        "n": 6,
+        "prefix": "1001101",
+        "completion": "100110101110111"
+      },
+      "rows": [
+        {
+          "n": 1,
+          "length": 1,
+          "minimum": "1",
+          "raw_words_at_minimum_length": 1,
+          "all_binary_prefix_queries": 3,
+          "feasible_prefixes": 2,
+          "leading_zero_queries": 1,
+          "language_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "n": 2,
+          "length": 3,
+          "minimum": "5",
+          "raw_words_at_minimum_length": 2,
+          "all_binary_prefix_queries": 15,
+          "feasible_prefixes": 6,
+          "leading_zero_queries": 7,
+          "language_sha256": "5004e4508413c62b6edb256235a461aea7b76f4e5fcbbc5ef89cee0517da4693"
+        },
+        {
+          "n": 3,
+          "length": 5,
+          "minimum": "27",
+          "raw_words_at_minimum_length": 2,
+          "all_binary_prefix_queries": 63,
+          "feasible_prefixes": 9,
+          "leading_zero_queries": 31,
+          "language_sha256": "fb77a072e7d22a27b807845a6e814b8112adf4f53b50ab4fd501ebfc59cc659c"
+        },
+        {
+          "n": 4,
+          "length": 8,
+          "minimum": "155",
+          "raw_words_at_minimum_length": 12,
+          "all_binary_prefix_queries": 511,
+          "feasible_prefixes": 56,
+          "leading_zero_queries": 255,
+          "language_sha256": "ecb908677b31b2efdf7c393cfc68fbc6a8f9010b15b2290533e163b593444ea1"
+        },
+        {
+          "n": 5,
+          "length": 11,
+          "minimum": "1655",
+          "raw_words_at_minimum_length": 12,
+          "all_binary_prefix_queries": 4095,
+          "feasible_prefixes": 75,
+          "leading_zero_queries": 2047,
+          "language_sha256": "7e7b0c5ded1036912f107cfb2aaaa63074152690d1b61faae883a58402ee3c38"
+        }
+      ],
+      "elapsed_seconds": 0.012709083966910839
+    },
+    "table_and_certificates": {
+      "n_inclusive": [
+        0,
+        20
+      ],
+      "cases": 21,
+      "records": [
+        {
+          "n": 0,
+          "value": "0",
+          "length": 0,
+          "word": "",
+          "run_types": []
+        },
+        {
+          "n": 1,
+          "value": "1",
+          "length": 1,
+          "word": "1",
+          "run_types": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "n": 2,
+          "value": "5",
+          "length": 3,
+          "word": "101",
+          "run_types": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "n": 3,
+          "value": "27",
+          "length": 5,
+          "word": "11011",
+          "run_types": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 4,
+          "value": "155",
+          "length": 8,
+          "word": "10011011",
+          "run_types": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "n": 5,
+          "value": "1655",
+          "length": 11,
+          "word": "11001110111",
+          "run_types": [
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "value": "18039",
+          "length": 15,
+          "word": "100011001110111",
+          "run_types": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "value": "281975",
+          "length": 19,
+          "word": "1000100110101110111",
+          "run_types": [
+            [
+              4,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "value": "4617711",
+          "length": 23,
+          "word": "10001100111010111101111",
+          "run_types": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "value": "138835439",
+          "length": 28,
+          "word": "1000010001100111010111101111",
+          "run_types": [
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "value": "4503885791",
+          "length": 33,
+          "word": "100001100011100111101011111011111",
+          "run_types": [
+            [
+              5,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "n": 11,
+          "value": "279381792735",
+          "length": 39,
+          "word": "100000100001100011100111101011111011111",
+          "run_types": [
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "n": 12,
+          "value": "17876500338655",
+          "length": 45,
+          "word": "100000100001000110010011100111101011111011111",
+          "run_types": [
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "n": 13,
+          "value": "1144081370306527",
+          "length": 51,
+          "word": "100000100001000100100110011101010111101011111011111",
+          "run_types": [
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "n": 14,
+          "value": "73222145385127871",
+          "length": 57,
+          "word": "100000100001000110010011100111101010111110101111110111111",
+          "run_types": [
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "n": 15,
+          "value": "9296594182239903679",
+          "length": 64,
+          "word": "1000000100000100001000110010011100111101010111110101111110111111",
+          "run_types": [
+            [
+              7,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "n": 16,
+          "value": "1189966115078053658495",
+          "length": 71,
+          "word": "10000001000001000011000111001001111001111101010111111010111111101111111",
+          "run_types": [
+            [
+              7,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "n": 17,
+          "value": "303421421018735347335039",
+          "length": 79,
+          "word": "1000000010000001000001000011000111001001111001111101010111111010111111101111111",
+          "run_types": [
+            [
+              8,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "n": 18,
+          "value": "77675883218955741073080191",
+          "length": 87,
+          "word": "100000001000000100000100001000100011000111001001111001111101010111111010111111101111111",
+          "run_types": [
+            [
+              8,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "n": 19,
+          "value": "19885026103583920149103476607",
+          "length": 95,
+          "word": "10000000100000010000010000100010001001001100011100111101010101111101010111111010111111101111111",
+          "run_types": [
+            [
+              8,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "n": 20,
+          "value": "5090566682637483446698432134911",
+          "length": 103,
+          "word": "1000000010000001000001000010001000110001110010011110011111010101011111101010111111101011111111011111111",
+          "run_types": [
+            [
+              8,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    "unchanged_python_dp": {
+      "n_inclusive": [
+        0,
+        12
+      ],
+      "records": [
+        {
+          "n": 0,
+          "value": "0",
+          "elapsed_seconds": 2.7078203856945038e-06
+        },
+        {
+          "n": 1,
+          "value": "1",
+          "elapsed_seconds": 2.2416934370994568e-05
+        },
+        {
+          "n": 2,
+          "value": "5",
+          "elapsed_seconds": 1.950003206729889e-05
+        },
+        {
+          "n": 3,
+          "value": "27",
+          "elapsed_seconds": 1.3667158782482147e-05
+        },
+        {
+          "n": 4,
+          "value": "155",
+          "elapsed_seconds": 2.9042363166809082e-05
+        },
+        {
+          "n": 5,
+          "value": "1655",
+          "elapsed_seconds": 3.262469545006752e-05
+        },
+        {
+          "n": 6,
+          "value": "18039",
+          "elapsed_seconds": 0.00021958397701382637
+        },
+        {
+          "n": 7,
+          "value": "281975",
+          "elapsed_seconds": 0.0005784160457551479
+        },
+        {
+          "n": 8,
+          "value": "4617711",
+          "elapsed_seconds": 0.0004793750122189522
+        },
+        {
+          "n": 9,
+          "value": "138835439",
+          "elapsed_seconds": 0.0024024168960750103
+        },
+        {
+          "n": 10,
+          "value": "4503885791",
+          "elapsed_seconds": 0.0028067920356988907
+        },
+        {
+          "n": 11,
+          "value": "279381792735",
+          "elapsed_seconds": 0.028607499785721302
+        },
+        {
+          "n": 12,
+          "value": "17876500338655",
+          "elapsed_seconds": 0.10645808326080441
+        }
+      ],
+      "method": "Unchanged subset-mask suffix-minimizing recurrence"
+    },
+    "unchanged_prefix_verifier": {
+      "n_inclusive": [
+        1,
+        20
+      ],
+      "positive_cases": 20,
+      "records": [
+        {
+          "n": 1,
+          "zero_branches": 1,
+          "max_frontier": 1,
+          "state_visits": 2,
+          "completion_states": 2,
+          "label_states": 2,
+          "terminal_states": 1
+        },
+        {
+          "n": 2,
+          "zero_branches": 2,
+          "max_frontier": 2,
+          "state_visits": 5,
+          "completion_states": 5,
+          "label_states": 7,
+          "terminal_states": 1
+        },
+        {
+          "n": 3,
+          "zero_branches": 4,
+          "max_frontier": 2,
+          "state_visits": 8,
+          "completion_states": 6,
+          "label_states": 6,
+          "terminal_states": 1
+        },
+        {
+          "n": 4,
+          "zero_branches": 5,
+          "max_frontier": 4,
+          "state_visits": 15,
+          "completion_states": 11,
+          "label_states": 18,
+          "terminal_states": 1
+        },
+        {
+          "n": 5,
+          "zero_branches": 8,
+          "max_frontier": 4,
+          "state_visits": 21,
+          "completion_states": 13,
+          "label_states": 19,
+          "terminal_states": 1
+        },
+        {
+          "n": 6,
+          "zero_branches": 9,
+          "max_frontier": 7,
+          "state_visits": 35,
+          "completion_states": 21,
+          "label_states": 39,
+          "terminal_states": 1
+        },
+        {
+          "n": 7,
+          "zero_branches": 11,
+          "max_frontier": 8,
+          "state_visits": 49,
+          "completion_states": 31,
+          "label_states": 73,
+          "terminal_states": 1
+        },
+        {
+          "n": 8,
+          "zero_branches": 15,
+          "max_frontier": 8,
+          "state_visits": 59,
+          "completion_states": 32,
+          "label_states": 54,
+          "terminal_states": 1
+        },
+        {
+          "n": 9,
+          "zero_branches": 16,
+          "max_frontier": 10,
+          "state_visits": 80,
+          "completion_states": 42,
+          "label_states": 127,
+          "terminal_states": 1
+        },
+        {
+          "n": 10,
+          "zero_branches": 21,
+          "max_frontier": 10,
+          "state_visits": 95,
+          "completion_states": 47,
+          "label_states": 129,
+          "terminal_states": 1
+        },
+        {
+          "n": 11,
+          "zero_branches": 22,
+          "max_frontier": 14,
+          "state_visits": 128,
+          "completion_states": 61,
+          "label_states": 301,
+          "terminal_states": 1
+        },
+        {
+          "n": 12,
+          "zero_branches": 24,
+          "max_frontier": 14,
+          "state_visits": 163,
+          "completion_states": 86,
+          "label_states": 333,
+          "terminal_states": 1
+        },
+        {
+          "n": 13,
+          "zero_branches": 27,
+          "max_frontier": 14,
+          "state_visits": 190,
+          "completion_states": 103,
+          "label_states": 297,
+          "terminal_states": 1
+        },
+        {
+          "n": 14,
+          "zero_branches": 33,
+          "max_frontier": 14,
+          "state_visits": 211,
+          "completion_states": 103,
+          "label_states": 225,
+          "terminal_states": 1
+        },
+        {
+          "n": 15,
+          "zero_branches": 34,
+          "max_frontier": 16,
+          "state_visits": 252,
+          "completion_states": 119,
+          "label_states": 274,
+          "terminal_states": 1
+        },
+        {
+          "n": 16,
+          "zero_branches": 41,
+          "max_frontier": 16,
+          "state_visits": 282,
+          "completion_states": 128,
+          "label_states": 440,
+          "terminal_states": 1
+        },
+        {
+          "n": 17,
+          "zero_branches": 42,
+          "max_frontier": 20,
+          "state_visits": 338,
+          "completion_states": 148,
+          "label_states": 508,
+          "terminal_states": 1
+        },
+        {
+          "n": 18,
+          "zero_branches": 44,
+          "max_frontier": 20,
+          "state_visits": 399,
+          "completion_states": 186,
+          "label_states": 964,
+          "terminal_states": 1
+        },
+        {
+          "n": 19,
+          "zero_branches": 48,
+          "max_frontier": 20,
+          "state_visits": 458,
+          "completion_states": 221,
+          "label_states": 835,
+          "terminal_states": 1
+        },
+        {
+          "n": 20,
+          "zero_branches": 56,
+          "max_frontier": 20,
+          "state_visits": 483,
+          "completion_states": 219,
+          "label_states": 713,
+          "terminal_states": 1
+        }
+      ],
+      "negative_same_length_valid_cases": 19,
+      "negative_controls": [
+        {
+          "n": 2,
+          "value": "6",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 3,
+          "value": "29",
+          "reason": "smaller completable prefix exists at bit 3: 110"
+        },
+        {
+          "n": 4,
+          "value": "236",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 5,
+          "value": "1977",
+          "reason": "smaller completable prefix exists at bit 3: 110"
+        },
+        {
+          "n": 6,
+          "value": "31640",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 7,
+          "value": "506568",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 8,
+          "value": "8252312",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 9,
+          "value": "264074000",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 10,
+          "value": "8521502256",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 11,
+          "value": "545376144416",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 12,
+          "value": "34904073356320",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 13,
+          "value": "2233861198201888",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 14,
+          "value": "143546717963600928",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 15,
+          "value": "18373979899340918848",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 16,
+          "value": "2356548991186320625728",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 17,
+          "value": "603276541743698080186496",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 18,
+          "value": "154438794686386708826570880",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 19,
+          "value": "39536331439828901848016765056",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        },
+        {
+          "n": 20,
+          "value": "10131277078190482613816968364160",
+          "reason": "smaller completable prefix exists at bit 2: 10"
+        }
+      ],
+      "method": "Unchanged nondeterministic bit-prefix automaton; boundary subsets enumerated; completion by recursive value-count ordering, not the new capacity formula",
+      "dependency": "Relies on the minimum-length and equality characterization theorems"
+    },
+    "raw_first_occurrences": {
+      "integer_scan_inclusive": [
+        0,
+        281975
+      ],
+      "n_inclusive": [
+        0,
+        7
+      ],
+      "integers_examined": 281976,
+      "first_occurrences": {
+        "0": "0",
+        "1": "1",
+        "2": "5",
+        "3": "27",
+        "4": "155",
+        "5": "1655",
+        "6": "18039",
+        "7": "281975"
+      },
+      "method": "Every integer decoded directly; no structural theorem or producer used"
+    }
+  },
+  "limits": [
+    "Finite checks supplement, and do not replace, the mathematical proof.",
+    "Fresh raw scanning stops at the stated bound; no historical larger scan is claimed.",
+    "Agreement of structurally restricted algorithms still depends on the structural theorem."
+  ],
+  "elapsed_seconds": 0.5343151660636067,
+  "finished_utc": "2026-10-21T11:00:43.402915+00:00"
+}

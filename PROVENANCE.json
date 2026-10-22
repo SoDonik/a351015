@@ -1,0 +1,136 @@
+{
+  "description": "Source provenance for a locally staged release; no public release commit has been assigned.",
+  "original_public_commit": "74bed98a778c46017ad676e892b4309b35d57015",
+  "files": [
+    {
+      "source_path_in_revision_workspace": "code/a351015_exact.py",
+      "source_sha256": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
+      "release_path": "code/a351015_exact.py",
+      "release_sha256": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "code/a351015_fast_exact.cpp",
+      "source_sha256": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95",
+      "release_path": "code/a351015_fast_exact.cpp",
+      "release_sha256": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "code/a351015_independent_verify.py",
+      "source_sha256": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
+      "release_path": "code/a351015_independent_verify.py",
+      "release_sha256": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "code/a351015_polynomial.py",
+      "source_sha256": "4b5a96c6349fc599c54baffe50037a93bf024c0be9ee7fca1096a4df9f9d92f4",
+      "release_path": "code/a351015_polynomial.py",
+      "release_sha256": "4b5a96c6349fc599c54baffe50037a93bf024c0be9ee7fca1096a4df9f9d92f4",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/validate_revision.py",
+      "source_sha256": "c8210c5306703d4282432609486ccdc1e100dda436e0359fd6a62ef09942616c",
+      "release_path": "validation/validate_revision.py",
+      "release_sha256": "93c410dcdbc9821feef355fa4fdcdfae584593e72d83d5409d6e2cc7165781c3",
+      "adaptations": [
+        "Use pinned public-program hashes instead of private baseline files.",
+        "Record reproducible relative command paths instead of local installation and workspace paths. Numerical tests unchanged."
+      ],
+      "adaptation_diff": "provenance/validation__validate_revision.py.patch",
+      "adaptation_diff_sha256": "20ecbb351ac79d286b3a6377ee8c512035de64a51fa7481c9f93ec8c54b85a47"
+    },
+    {
+      "source_path_in_revision_workspace": "validation/benchmark_revision.py",
+      "source_sha256": "a8950f4e8a33fd3628b58e49697a87013b27e9ab4584526078ed701a676bd3e8",
+      "release_path": "validation/benchmark_revision.py",
+      "release_sha256": "5b9afda337ee9f890d1f941a23e5e45ec74de66761dc5835ce60539683cee145",
+      "adaptations": [
+        "Record package-relative command paths and executable names, plus actual runtime/compiler versions. Measurement and output validation unchanged."
+      ],
+      "adaptation_diff": "provenance/validation__benchmark_revision.py.patch",
+      "adaptation_diff_sha256": "84ee034bef2712c90fa7a65d101bd060456a889d74047c8ccd002377a417828f"
+    },
+    {
+      "source_path_in_revision_workspace": "validation/second_audit/audit_code.py",
+      "source_sha256": "35e88a4b1f504acb42d9110d6a2fae6be5c17431f8087e48cf260e497f19968e",
+      "release_path": "validation/second_audit/audit_code.py",
+      "release_sha256": "46513bee023c450e9171b76a433f262092acbf689a1994e396964210ea03ee5c",
+      "adaptations": [
+        "Exclude local manuscript/private-history preservation checks; retain all numerical language, boundary, API, decimal, runtime, harness-control, and RSS checks.",
+        "Record runtime executable names and package-relative commands. Remove unavailable private parser-history reference."
+      ],
+      "adaptation_diff": "provenance/validation__second_audit__audit_code.py.patch",
+      "adaptation_diff_sha256": "142983751d6384e60ef503141f594044e989f37d8b7a09c244e3b842508a3c76"
+    },
+    {
+      "public_source_url": "https://raw.githubusercontent.com/SoDonik/a351015/74bed98a778c46017ad676e892b4309b35d57015/LICENSE",
+      "release_path": "LICENSE",
+      "release_sha256": "1510acc1ad87441aca769f524a01835d2fa8bfaab8d879bbc35f9f6381b2fa1e",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/oct21/independent_prefix.py",
+      "source_sha256": "792c13925493d3f6e4074869af1881e97ef4dc660de874b8e86aae234dc58bb6",
+      "release_path": "validation/oct21/independent_prefix.py",
+      "release_sha256": "792c13925493d3f6e4074869af1881e97ef4dc660de874b8e86aae234dc58bb6",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/oct21/run_independent.py",
+      "source_sha256": "a9b7bb998051a95287283e53e48d77ac95cfd2d4275a94a2a543a2200465c13c",
+      "release_path": "validation/oct21/run_independent.py",
+      "release_sha256": "41d958faaeebcfedfe07003c4774a9bfd1adce332872147dd35e127bcf3aed6b",
+      "adaptations": [
+        "Retain the original manuscript-read hash without requiring the private draft source at runtime.",
+        "Generate package-relative command metadata and runtime aliases; omit the host name. All mathematical checks unchanged."
+      ],
+      "adaptation_diff": "provenance/validation__oct21__run_independent.py.patch",
+      "adaptation_diff_sha256": "fff4c6c5aca459ff02c1b736b58e57dbbe53213ff57333119a1a78eefa3eed3b"
+    },
+    {
+      "source_path_in_revision_workspace": "validation/results/oct21/independent/precomparison_implementation.json",
+      "source_sha256": "6ad7a5997386c56c2379e7b37591fbae1c8ded60a4e2f7ebdc0b0679d87ddd67",
+      "release_path": "validation/results/oct21/independent/precomparison_implementation.json",
+      "release_sha256": "6ad7a5997386c56c2379e7b37591fbae1c8ded60a4e2f7ebdc0b0679d87ddd67",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/oct21/raw_scan.c",
+      "source_sha256": "92cbf1cb1cc18dceec2cc3516ab6f0aadee18072cc15ba7bdc1647f883a5360e",
+      "release_path": "validation/oct21/raw_scan.c",
+      "release_sha256": "92cbf1cb1cc18dceec2cc3516ab6f0aadee18072cc15ba7bdc1647f883a5360e",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/oct21/run_raw_scan.py",
+      "source_sha256": "c728954d6e576c9ded39b5a9b72e6f18ab275a8643b110588470ba6919eb30e4",
+      "release_path": "validation/oct21/run_raw_scan.py",
+      "release_sha256": "c728954d6e576c9ded39b5a9b72e6f18ab275a8643b110588470ba6919eb30e4",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/oct21/raw_scan_README.md",
+      "source_sha256": "a47b510b3a074cb6a727521e257865431489a6da39d785a5dc1700db752431eb",
+      "release_path": "validation/oct21/raw_scan_README.md",
+      "release_sha256": "a47b510b3a074cb6a727521e257865431489a6da39d785a5dc1700db752431eb",
+      "adaptations": []
+    },
+    {
+      "source_path_in_revision_workspace": "validation/results/oct21/raw_scan/completed/report.json",
+      "source_sha256": "2aaaaa8b17de4b9fccc41adc4c5f5f4e9b379ef8becaf8928b3d51ec483231cf",
+      "release_path": "validation/results/oct21/raw_scan/completed/report.json",
+      "release_sha256": "2aaaaa8b17de4b9fccc41adc4c5f5f4e9b379ef8becaf8928b3d51ec483231cf",
+      "adaptations": [],
+      "companion_files_copied_unchanged": 325,
+      "excluded_local_products": [
+        "raw_scan",
+        "raw_scan_sanitized",
+        "raw_scan_sanitized.dSYM/",
+        "tmp/"
+      ]
+    }
+  ]
+}

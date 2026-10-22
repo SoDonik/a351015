@@ -1,0 +1,126 @@
+{
+  "scope": "Every integer in the stated scan range and every positive word of each stated length are decoded from the raw definition. Every binary prefix up to that length, including leading-zero strings, is compared with the complete raw language. No structural restriction or capacity criterion is used to build these languages.",
+  "scan": {
+    "inclusive_lower": 0,
+    "inclusive_upper": 18039,
+    "integers_decoded": 18040,
+    "first_occurrences": {
+      "0": 0,
+      "1": 1,
+      "2": 5,
+      "3": 27,
+      "4": 155,
+      "5": 1655,
+      "6": 18039
+    },
+    "elapsed_seconds": 0.020170374773442745
+  },
+  "prefix_languages": [
+    {
+      "n": 0,
+      "length_from_raw_first_occurrence": 0,
+      "complete_positive_words_decoded": 1,
+      "qualifying_words": 1,
+      "true_prefixes": 1,
+      "binary_prefixes_checked": 1,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 3.195879980921745e-05
+    },
+    {
+      "n": 1,
+      "length_from_raw_first_occurrence": 1,
+      "complete_positive_words_decoded": 1,
+      "qualifying_words": 1,
+      "true_prefixes": 2,
+      "binary_prefixes_checked": 3,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "elapsed_seconds": 2.7875415980815887e-05
+    },
+    {
+      "n": 2,
+      "length_from_raw_first_occurrence": 3,
+      "complete_positive_words_decoded": 4,
+      "qualifying_words": 2,
+      "true_prefixes": 6,
+      "binary_prefixes_checked": 15,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "5004e4508413c62b6edb256235a461aea7b76f4e5fcbbc5ef89cee0517da4693",
+      "elapsed_seconds": 4.39169816672802e-05
+    },
+    {
+      "n": 3,
+      "length_from_raw_first_occurrence": 5,
+      "complete_positive_words_decoded": 16,
+      "qualifying_words": 2,
+      "true_prefixes": 9,
+      "binary_prefixes_checked": 63,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "fb77a072e7d22a27b807845a6e814b8112adf4f53b50ab4fd501ebfc59cc659c",
+      "elapsed_seconds": 0.00010091718286275864
+    },
+    {
+      "n": 4,
+      "length_from_raw_first_occurrence": 8,
+      "complete_positive_words_decoded": 128,
+      "qualifying_words": 12,
+      "true_prefixes": 56,
+      "binary_prefixes_checked": 511,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "ecb908677b31b2efdf7c393cfc68fbc6a8f9010b15b2290533e163b593444ea1",
+      "elapsed_seconds": 0.0007765418849885464
+    },
+    {
+      "n": 5,
+      "length_from_raw_first_occurrence": 11,
+      "complete_positive_words_decoded": 1024,
+      "qualifying_words": 12,
+      "true_prefixes": 75,
+      "binary_prefixes_checked": 4095,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "7e7b0c5ded1036912f107cfb2aaaa63074152690d1b61faae883a58402ee3c38",
+      "elapsed_seconds": 0.006307667121291161
+    },
+    {
+      "n": 6,
+      "length_from_raw_first_occurrence": 15,
+      "complete_positive_words_decoded": 16384,
+      "qualifying_words": 264,
+      "true_prefixes": 1470,
+      "binary_prefixes_checked": 65535,
+      "additional_invalid_or_overlong_prefixes_checked": 6,
+      "language_sha256": "e1ae4cc49b7f47de6b7e8c1877c3850caf6cb8b38738cd0a02a15325a28b198d",
+      "elapsed_seconds": 0.12319254083558917
+    }
+  ],
+  "total_binary_prefixes_checked": 70223,
+  "examples": [
+    {
+      "n": 2,
+      "prefix": "11",
+      "expected": true,
+      "reason": "The current final part can grow to value 2.",
+      "completion": "110"
+    },
+    {
+      "n": 6,
+      "prefix": "101",
+      "expected": true,
+      "reason": "Eventual active type (2,2) absorbs the preceding fixed part 2.",
+      "completion": "101011001110111"
+    },
+    {
+      "n": 4,
+      "prefix": "1001100",
+      "expected": false,
+      "reason": "Any active type repeats the already completed type (3,1)."
+    },
+    {
+      "n": 5,
+      "prefix": "100110010",
+      "expected": false,
+      "reason": "The completed type (3,1) occurs twice; absorbing the last fixed run would exceed the cutoff."
+    }
+  ]
+}

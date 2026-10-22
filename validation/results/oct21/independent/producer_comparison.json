@@ -1,0 +1,1102 @@
+{
+  "command": "python3 code/a351015_polynomial.py --max-n 120 --json",
+  "cwd": ".",
+  "returncode": 0,
+  "elapsed_seconds": 61.08356829173863,
+  "indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "comparisons": [
+    {
+      "n": 0,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 1,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 2,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 3,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 4,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 5,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 6,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 7,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 8,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 9,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 10,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 11,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 12,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 13,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 14,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 15,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 16,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 17,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 18,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 19,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 20,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 21,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 22,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 23,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 24,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 25,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 26,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 27,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 28,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 29,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 30,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 31,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 32,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 33,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 34,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 35,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 36,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 37,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 38,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 39,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 40,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 41,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 42,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 43,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 44,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 45,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 46,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 47,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 48,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 49,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 50,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 51,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 52,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 53,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 54,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 55,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 56,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 57,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 58,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 59,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 60,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 61,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 62,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 63,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 64,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 65,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 66,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 67,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 68,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 69,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 70,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 71,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 72,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 73,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 74,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 75,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 76,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 77,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 78,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 79,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 80,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 81,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 82,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 83,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 84,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 85,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 86,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 87,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 88,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 89,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 90,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 91,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 92,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 93,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 94,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 95,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 96,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 97,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 98,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 99,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 100,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 101,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 102,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 103,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 104,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 105,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 106,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 107,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 108,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 109,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 110,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 111,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 112,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 113,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 114,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 115,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 116,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 117,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 118,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 119,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    },
+    {
+      "n": 120,
+      "integer_equal": true,
+      "decimal_string_equal": true,
+      "binary_string_equal": true,
+      "length_equal": true,
+      "raw_decoded_runs_equal": true
+    }
+  ],
+  "stdout": "producer_stdout.json",
+  "stderr": "producer_stderr.txt",
+  "scope": "Same proved polynomial algorithm, separately implemented; agreement is not an independent proof of the lemmas."
+}

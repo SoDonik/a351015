@@ -1,0 +1,56 @@
+first rho=0 at k=0
+first rho=1 at k=1
+first rho=2 at k=5
+first rho=3 at k=27
+first rho=4 at k=155
+first rho=5 at k=1655
+first rho=6 at k=18039
+first rho=7 at k=281975
+first rho=8 at k=4617711
+last_visited=100000000 rho=6
+first rho=9 at k=138835439
+last_visited=200000000 rho=6
+last_visited=300000000 rho=6
+last_visited=400000000 rho=6
+last_visited=500000000 rho=6
+last_visited=600000000 rho=6
+last_visited=700000000 rho=6
+last_visited=800000000 rho=6
+last_visited=900000000 rho=7
+last_visited=1000000000 rho=6
+last_visited=1100000000 rho=6
+last_visited=1200000000 rho=6
+last_visited=1300000000 rho=7
+last_visited=1400000000 rho=6
+last_visited=1500000000 rho=6
+last_visited=1600000000 rho=6
+last_visited=1700000000 rho=6
+last_visited=1800000000 rho=7
+last_visited=1900000000 rho=7
+last_visited=2000000000 rho=6
+last_visited=2100000000 rho=7
+last_visited=2200000000 rho=6
+last_visited=2300000000 rho=6
+last_visited=2400000000 rho=6
+last_visited=2500000000 rho=6
+last_visited=2600000000 rho=7
+last_visited=2700000000 rho=6
+last_visited=2800000000 rho=6
+last_visited=2900000000 rho=6
+last_visited=3000000000 rho=6
+last_visited=3100000000 rho=6
+last_visited=3200000000 rho=6
+last_visited=3300000000 rho=5
+last_visited=3400000000 rho=6
+last_visited=3500000000 rho=6
+last_visited=3600000000 rho=7
+last_visited=3700000000 rho=7
+last_visited=3800000000 rho=7
+last_visited=3900000000 rho=6
+last_visited=4000000000 rho=6
+last_visited=4100000000 rho=7
+last_visited=4200000000 rho=7
+last_visited=4300000000 rho=5
+last_visited=4400000000 rho=6
+last_visited=4500000000 rho=6
+first rho=10 at k=4503885791

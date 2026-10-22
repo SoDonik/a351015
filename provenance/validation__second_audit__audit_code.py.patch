@@ -1,0 +1,142 @@
+--- workspace/validation/second_audit/audit_code.py
++++ release/validation/second_audit/audit_code.py
+@@ -1,9 +1,10 @@
+ #!/usr/bin/env python3
+-"""Second source audit: new oracles and explicit limits, preserving old evidence.
+-
+-Run from Revised Paper with PYTHONDONTWRITEBYTECODE=1. All generated files
+-are below validation/results/second_audit or tmp/second_audit. This driver
+-never changes the producer or any original validation result.
++"""Portable numerical portion of the second source audit.
++
++Run after the release validation and benchmark commands. Private workspace
++preservation and manuscript checks are excluded; numerical tests remain.
++All generated files are below validation/results/second_audit or
++tmp/second_audit. The producer sources are never changed.
+ Python 3.10 is sufficient; decimal-safeguard probes run when that feature
+ is available (Python 3.11+).
+ """
+@@ -33,7 +34,6 @@
+ ROOT = Path(__file__).resolve().parents[2]
+ RESULTS = ROOT / "validation/results/second_audit"
+ TEMP = ROOT / "tmp/second_audit"
+-ARCHIVE = ROOT / "review_history/before_second_audit"
+ 
+ 
+ def require(condition, message):
+@@ -80,79 +80,6 @@
+                   for length in range(1, n + 1))[:n]
+ 
+ 
+-def check_historical_evidence(producer, validation, benchmark):
+-    old = json.loads((ARCHIVE / "validation/results/validation.json").read_text())
+-    measured = json.loads((ARCHIVE / "validation/results/benchmarks.json").read_text())
+-    require(old["status"] == measured["status"] == "passed", "historical reports failed")
+-    source_checks = []
+-    for report in (old, measured):
+-        for relative, expected in report["source_sha256"].items():
+-            candidate = ROOT / relative
+-            if relative == "validation/benchmark_revision.py":
+-                candidate = ARCHIVE / relative
+-            require(digest(candidate) == expected, f"historical source mismatch: {relative}")
+-            source_checks.append(str(candidate.relative_to(ROOT)))
+-    for name in ("a351015_exact.py", "a351015_independent_verify.py", "a351015_fast_exact.cpp"):
+-        require(digest(ROOT / "code" / name) == digest(ROOT / "baseline" / name),
+-                f"original source changed: {name}")
+-    output_checks = []
+-    for row in (measured["compilation"], *measured["benchmarks"]):
+-        for stream in ("stdout", "stderr"):
+-            path = ROOT / row[stream]
+-            require(digest(path) == row[f"{stream}_sha256"], f"historical stream changed: {path}")
+-            output_checks.append(row[stream])
+-        expected_bytes = row["maximum_rss_raw"] * (1 if row["maximum_rss_raw_unit"] == "bytes" else 1024)
+-        require(expected_bytes == row["maximum_rss_bytes"], "historical RSS normalization")
+-        require(expected_bytes / 2**20 == row["maximum_rss_mib"], "historical RSS MiB")
+-    require(digest(ROOT / "validation/results/build/a351015_fast") == measured["compiled_binary_sha256"],
+-            "historical C++ executable changed")
+-    require(digest(ARCHIVE / "validation/results/validation.json") == measured["independent_validation_sha256"],
+-            "historical reports do not link")
+-
+-    checks = old["checks"]
+-    require(sum((labels + 1) * 5**labels for labels in range(5)) == checks["suffix_counts"]["cases"] == 3711,
+-            "suffix coverage mismatch")
+-    boundary_count = 4**3 * sum(math.comb(3, k) * (k + 3) * 4 for k in range(4))
+-    require(boundary_count == checks["boundary_counts"]["cases"] == 9216, "boundary coverage mismatch")
+-    require(len(checks["input_edges"]["checks"]) + len(checks["input_edges"]["additional_zero_checks"]) == 120,
+-            "input coverage mismatch")
+-    require(sum(r["zero_branches"] for r in checks["unchanged_prefix_verifier"]["records"]) == 463,
+-            "prefix branch coverage mismatch")
+-    require(sum((1 << (r["length"] + 1)) - 1 for r in checks["all_small_binary_prefixes"]["rows"]) == 4687,
+-            "all-prefix coverage mismatch")
+-    require(checks["raw_first_occurrences"]["integers_examined"] == 281976,
+-            "raw-scan count mismatch")
+-
+-    manuscript = (ROOT / "manuscript/Kadirbekov.tex").read_text()
+-    table = [(int(n), int(length), int(value)) for n, length, value in
+-             re.findall(r"^(\d+) & (\d+) & (\d+)\\\\$", manuscript, re.MULTILINE)]
+-    require([r[0] for r in table] == list(range(21)), "term table extraction/range")
+-    records = []
+-    for (n, length, expected), recorded in zip(table, checks["table_and_certificates"]["records"]):
+-        value, word, ordered = producer.exact_term(n)
+-        require((value, len(word)) == (expected, length), f"manuscript table differs: {n}")
+-        require(value == validation.EXPECTED[n] == int(recorded["value"]), f"table/evidence value: {n}")
+-        require(word == recorded["word"] and ordered == tuple(map(tuple, recorded["run_types"])),
+-                f"table/evidence certificate: {n}")
+-        require(ordered == raw_runs_integer(value), f"set-bit decoder certificate: {n}")
+-        require(len(ordered) == len(set(ordered)) == n, f"distinct types: {n}")
+-        require(len(word) == sum(rectangular_costs(n)), f"independent cost list: {n}")
+-        records.append({"n": n, "length": length, "value": str(value)})
+-    verify = {
+-        "polynomial_n20": lambda row: benchmark.verify_polynomial_output(row, 20),
+-        "polynomial_n100": lambda row: benchmark.verify_polynomial_output(row, 100),
+-        "python_dp_through16": benchmark.verify_python_dp_output,
+-        "cpp_dp_17_20": benchmark.verify_cpp_output,
+-        "prefix_verifier_17_20": benchmark.verify_prefix_output,
+-    }
+-    for row in measured["benchmarks"]:
+-        verify[row["label"]](row)
+-    return {"source_checks": source_checks, "raw_output_hash_checks": output_checks,
+-            "coverage_counts_rederived": [120, 3711, 9216, 4687, 463, 281976],
+-            "table": records, "historical_report_sha256": {
+-                name: digest(ARCHIVE / "validation/results" / name)
+-                for name in ("validation.json", "benchmarks.json")},
+-            "scope": "Source/output identities and arithmetic consistency; historical timing is not remeasured here."}
+ 
+ 
+ def check_raw_languages(producer, verifier, validation):
+@@ -442,7 +369,7 @@
+         checked = json.loads(result.stdout)
+         require(checked["value20"] == "5090566682637483446698432134911" and checked["length20"] == 103
+                 and checked["decimal5001"], f"runtime result {name}")
+-        records.append({"requested_runtime": name, "available": True, "command": command, **checked})
++        records.append({"requested_runtime": name, "available": True, "command": [name, *command[1:]], **checked})
+     cli = []
+     for arguments, status in ((["--n", "-1"], 2), (["--max-n", "-1"], 2),
+                               (["--n", "2", "--max-n", "2"], 2), (["--n", "1.5"], 2),
+@@ -503,7 +430,7 @@
+     return {"mutation_controls": controls,
+             "contradictory_duplicate_dp_row_accepted": duplicate_accepted,
+             "duplicate_row_probe": str(path.relative_to(ROOT)),
+-            "impact": "The original real output has exactly 17 unique rows and is valid. The added uniqueness/order guard now rejects the contradictory duplicate before dictionary construction. The pre-fix acceptance is preserved in before_parser_guard/code_audit.json."}
++            "impact": "The original real output has exactly 17 unique rows and is valid. The added uniqueness/order guard now rejects the contradictory duplicate before dictionary construction."}
+ 
+ 
+ def check_wait4(benchmark):
+@@ -531,14 +458,14 @@
+              ROOT / "validation/validate_revision.py", ROOT / "validation/benchmark_revision.py"]
+     report = {"status": "running", "started_utc": datetime.now(timezone.utc).isoformat(),
+               "python": sys.version, "platform": platform.platform(),
+-              "command": [sys.executable, *sys.argv], "working_directory": str(Path.cwd()),
++              "command": ["python3", "validation/second_audit/audit_code.py"], "working_directory": ".",
++              "path_convention": "Commands use package-relative paths and runtime executable names; actual runtime versions are recorded.",
+               "source_sha256": {str(path.relative_to(ROOT)): digest(path) for path in paths}, "checks": {},
+               "limits": ["Finite tests supplement the mathematical proof.",
+-                         "All original reports remain historical evidence.",
++                         "Private workspace-history, manuscript-table, and historical-file preservation checks are outside this public numerical harness.",
+                          "No independent numerical minimality check of n=100 is claimed."]}
+     started = time.perf_counter()
+     jobs = (
+-        ("historical_evidence_and_table", lambda: check_historical_evidence(producer, validation, benchmark)),
+         ("wait4_separate_children", lambda: check_wait4(benchmark)),
+         ("api_and_decimal", lambda: check_edges_and_decimal(producer)),
+         ("runtime_and_cli", lambda: check_runtime_and_cli(producer)),

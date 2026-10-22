@@ -1,0 +1,57 @@
+--- workspace/validation/oct21/run_independent.py
++++ release/validation/oct21/run_independent.py
+@@ -1,7 +1,11 @@
+ #!/usr/bin/env python3
+ """Reproduce the independent October 21 implementation and search checks.
+ 
+-Run from the revision directory:
++Release adaptation: command metadata is portable, hostname is omitted, and
++the manuscript originally read is identified by its retained SHA-256 rather
++than a runtime dependency on the private draft file. Numerical checks unchanged.
++
++Run from the package directory:
+   python3 validation/oct21/run_independent.py --max-n 120 \
+       --exact-max-n 20 --exhaustive-max-n 6
+ 
+@@ -119,7 +123,7 @@
+         assert all(value for key, value in row.items() if key != "n"), row
+         comparisons.append(row)
+     result = {
+-        "command": shlex.join(command), "cwd": str(REVISION),
++        "command": shlex.join(["python3", *command[1:]]), "cwd": ".",
+         "returncode": completed.returncode, "elapsed_seconds": elapsed,
+         "indices": list(range(len(records))), "comparisons": comparisons,
+         "stdout": "producer_stdout.json", "stderr": "producer_stderr.txt",
+@@ -396,8 +400,10 @@
+                             "stdout": result.stdout, "stderr": result.stderr})
+         except OSError as error:
+             queries.append({"command": shlex.join(command), "error": str(error)})
+-    return {"python": sys.version, "python_executable": sys.executable,
+-            "platform": platform.platform(), "uname": list(platform.uname()),
++    return {"python": sys.version, "python_executable_alias": "python3",
++            "platform": platform.platform(),
++            "system": platform.system(), "release": platform.release(),
++            "machine": platform.machine(),
+             "cpu_count": os.cpu_count(), "hardware_queries": queries}
+ 
+ 
+@@ -415,12 +421,17 @@
+     started = time.perf_counter()
+     report = {
+         "started_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+-        "invocation": shlex.join([sys.executable, *sys.argv]), "cwd": str(Path.cwd()),
++        "invocation": shlex.join(["python3", "validation/oct21/run_independent.py",
++                                  "--max-n", str(args.max_n),
++                                  "--exact-max-n", str(args.exact_max_n),
++                                  "--exhaustive-max-n", str(args.exhaustive_max_n)]),
++        "cwd": ".",
++        "path_convention": "Commands use package-relative paths and python3 as the runtime alias; host.python records the actual runtime version.",
+         "manuscript_sha256_used_to_implement": MANUSCRIPT_READ_SHA256,
+         "source_sha256": {str(path.relative_to(REVISION)): file_hash(path) for path in (
+             REVISION / "code/a351015_polynomial.py",
+             REVISION / "validation/oct21/independent_prefix.py",
+-            Path(__file__).resolve(), REVISION / "manuscript/Kadirbekov.tex")},
++            Path(__file__).resolve())},
+         "host": host_report(),
+     }
+     dump("run_started.json", report)

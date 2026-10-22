@@ -1,0 +1,60 @@
+--- workspace/validation/benchmark_revision.py
++++ release/validation/benchmark_revision.py
+@@ -7,6 +7,7 @@
+ n=17..20.  The n=100 polynomial row is a scalability/certificate check, not an
+ independent proof of the new term's numerical minimality.
+ 
++This release adaptation records portable command paths and runtime versions.
+ The report, raw logs, build products, and temporary files are all written
+ under the directory containing --output. The preceding validation report
+ is still read from validation/results/validation.json.
+@@ -34,6 +35,21 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ RESULTS = ROOT / "validation" / "results"
++
++
++def portable_command(command: list[str]) -> list[str]:
++    """Describe the executed command without private installation paths."""
++    result = []
++    for index, item in enumerate(command):
++        if item == sys.executable:
++            result.append("python3")
++        elif Path(item).is_absolute():
++            path = Path(item)
++            result.append(str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else
++                          path.name if index == 0 else item)
++        else:
++            result.append(item)
++    return result
+ 
+ 
+ def measured_process(label: str, command: list[str], environment: dict[str, str],
+@@ -55,7 +71,7 @@
+     rss_unit = "bytes" if sys.platform == "darwin" else "KiB"
+     rss_bytes = raw_rss if sys.platform == "darwin" else raw_rss * 1024
+     return {
+-        "label": label, "command": command, "working_directory": str(ROOT),
++        "label": label, "command": portable_command(command), "working_directory": ".",
+         "started_utc": start_utc, "returncode": child.returncode,
+         "wall_seconds": elapsed, "user_seconds": usage.ru_utime,
+         "system_seconds": usage.ru_stime, "maximum_rss_raw": raw_rss,
+@@ -170,7 +186,8 @@
+     report = {
+         "status": "running", "started_utc": datetime.now(timezone.utc).isoformat(),
+         "python": sys.version, "platform": platform.platform(), "cpu": read_cpu_information(),
+-        "command": [sys.executable, *sys.argv],
++        "command": ["python3", "validation/benchmark_revision.py", "--output", str(output.relative_to(ROOT))],
++        "path_convention": "Commands use package-relative paths and executable names; python and compiler.version identify the actual tools.",
+         "results_directory": str(results_directory.relative_to(ROOT)),
+         "source_sha256": {str(path.relative_to(ROOT)): sha256(path) for path in
+                           [Path(__file__).resolve(), ROOT / "validation" / "validate_revision.py",
+@@ -192,7 +209,7 @@
+         compiler = shutil.which("clang++") or shutil.which("g++")
+         require(compiler is not None, "no C++ compiler found")
+         version = subprocess.run([compiler, "--version"], capture_output=True, text=True, check=True)
+-        report["compiler"] = {"path": compiler, "version": version.stdout.strip()}
++        report["compiler"] = {"executable": Path(compiler).name, "version": version.stdout.strip()}
+         executable = build / "a351015_fast"
+         compile_command = [compiler, "-O3", "-std=c++17", str(ROOT / "code" / "a351015_fast_exact.cpp"),
+                            "-o", str(executable)]

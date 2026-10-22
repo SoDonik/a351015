@@ -1,0 +1,19 @@
+{
+  "interval_inclusive": ["0", "4503885791"],
+  "integers_visited": "4503885792",
+  "maximum_rho_observed": 10,
+  "first_occurrences": [
+    {"n": 0, "value": "0", "occurrences": "1"},
+    {"n": 1, "value": "1", "occurrences": "121"},
+    {"n": 2, "value": "5", "occurrences": "7618"},
+    {"n": 3, "value": "27", "occurrences": "884695"},
+    {"n": 4, "value": "155", "occurrences": "43503766"},
+    {"n": 5, "value": "1655", "occurrences": "506894915"},
+    {"n": 6, "value": "18039", "occurrences": "1691200727"},
+    {"n": 7, "value": "281975", "occurrences": "1738240201"},
+    {"n": 8, "value": "4617711", "occurrences": "497326978"},
+    {"n": 9, "value": "138835439", "occurrences": "25826769"},
+    {"n": 10, "value": "4503885791", "occurrences": "1"}
+  ],
+  "last_maximal_runs": [[5, 1], [1, 1], [4, 1], [1, 2], [3, 1], [1, 3], [2, 2], [1, 4], [2, 1], [1, 5]]
+}

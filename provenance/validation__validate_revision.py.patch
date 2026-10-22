@@ -1,0 +1,54 @@
+--- workspace/validation/validate_revision.py
++++ release/validation/validate_revision.py
+@@ -1,9 +1,11 @@
+ #!/usr/bin/env python3
+ """Independent, finite checks of the referee's A351015 construction.
+ 
+-Run from any directory with PYTHONDONTWRITEBYTECODE=1.  This harness writes
+-only its requested JSON evidence file, under this revision's validation/
+-results directory.  Its raw composition language and recursive ordering
++Release adaptation of the local validation harness. Run from this package
++directory with python3 -B. The original programs are checked against hashes
++from the fixed public baseline commit; private baseline copies are not needed.
++This harness writes only its requested JSON evidence file under validation/
++results.  Its raw composition language and recursive ordering
+ oracles do not call the producer's capacity tests.
+ """
+ 
+@@ -349,7 +351,11 @@
+     report = {
+         "status": "running", "started_utc": datetime.now(timezone.utc).isoformat(),
+         "python": sys.version, "platform": platform.platform(),
+-        "command": [sys.executable, *sys.argv], "working_directory": str(Path.cwd()),
++        "command": ["python3", "validation/validate_revision.py",
++                    "--dp-through", str(args.dp_through), "--raw-through", str(args.raw_through),
++                    "--output", str(output.relative_to(ROOT))],
++        "working_directory": ".",
++        "path_convention": "Commands use package-relative paths and python3 as the runtime alias; python records the actual runtime version.",
+         "source_sha256": {str(path.relative_to(ROOT)): sha256(path) for path in
+                           [Path(__file__).resolve(), *(ROOT / "code").glob("*.py"),
+                            ROOT / "code" / "a351015_fast_exact.cpp"]},
+@@ -364,10 +370,20 @@
+         verifier = load_module("revision_old_prefix", "a351015_independent_verify.py")
+         checks = report["checks"]
+         original_names = ("a351015_exact.py", "a351015_independent_verify.py", "a351015_fast_exact.cpp")
++        public_baseline = {
++            "a351015_exact.py": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
++            "a351015_independent_verify.py": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
++            "a351015_fast_exact.cpp": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95",
++        }
+         for filename in original_names:
+-            require(sha256(ROOT / "code" / filename) == sha256(ROOT / "baseline" / filename),
+-                    f"original program copy changed: {filename}")
+-        checks["original_programs_unchanged"] = {"files": list(original_names), "comparison": "SHA-256 against baseline copies"}
++            require(sha256(ROOT / "code" / filename) == public_baseline[filename],
++                    f"original program differs from the public baseline: {filename}")
++        checks["original_programs_unchanged"] = {
++            "files": list(original_names), "comparison": "SHA-256 against the fixed public baseline",
++            "repository": "https://github.com/SoDonik/a351015",
++            "commit": "74bed98a778c46017ad676e892b4309b35d57015",
++            "source_sha256": public_baseline,
++        }
+         jobs = (
+             ("input_edges", lambda: check_input_edges(producer)),
+             ("suffix_counts", lambda: check_suffix_counts(producer)),

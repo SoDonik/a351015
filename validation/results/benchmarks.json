@@ -1,0 +1,260 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-21T11:03:35.528552+00:00",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "cpu": {
+    "machine": "arm64",
+    "processor": "arm",
+    "machdep.cpu.brand_string": "Apple M4",
+    "hw.memsize": "17179869184",
+    "hw.ncpu": "10"
+  },
+  "command": [
+    "python3",
+    "validation/benchmark_revision.py",
+    "--output",
+    "validation/results/benchmarks.json"
+  ],
+  "path_convention": "Commands use package-relative paths and executable names; python and compiler.version identify the actual tools.",
+  "results_directory": "validation/results",
+  "source_sha256": {
+    "validation/benchmark_revision.py": "5b9afda337ee9f890d1f941a23e5e45ec74de66761dc5835ce60539683cee145",
+    "validation/validate_revision.py": "93c410dcdbc9821feef355fa4fdcdfae584593e72d83d5409d6e2cc7165781c3",
+    "code/a351015_exact.py": "581abad8fdbcb220341aed32629fcfcbff15e1321feff310b0a3701a938a7e25",
+    "code/a351015_independent_verify.py": "e30d3356f9cc8f103aa4afb767aa780b1343fa74fa6eebc1c61625fe2ba706ce",
+    "code/a351015_polynomial.py": "4b5a96c6349fc599c54baffe50037a93bf024c0be9ee7fca1096a4df9f9d92f4",
+    "code/a351015_fast_exact.cpp": "1df991c17c3f0ae9279c31ac07c82e9b445136c1373ea21ef41f8c7f1342df95"
+  },
+  "benchmarks": [
+    {
+      "label": "polynomial_n20",
+      "command": [
+        "python3",
+        "code/a351015_polynomial.py",
+        "--n",
+        "20",
+        "--json"
+      ],
+      "working_directory": ".",
+      "started_utc": "2026-10-21T11:03:36.204283+00:00",
+      "returncode": 0,
+      "wall_seconds": 0.03619012515991926,
+      "user_seconds": 0.028293,
+      "system_seconds": 0.005736,
+      "maximum_rss_raw": 20774912,
+      "maximum_rss_raw_unit": "bytes",
+      "maximum_rss_bytes": 20774912,
+      "maximum_rss_mib": 19.8125,
+      "measurement": "One fresh subprocess; os.wait4 child rusage, not cumulative RUSAGE_CHILDREN",
+      "stdout": "validation/results/polynomial_n20.stdout.txt",
+      "stderr": "validation/results/polynomial_n20.stderr.txt",
+      "stdout_sha256": "5a6cba8c54169d4b1a9cd6e80edeed60c73464c74f4349641f3e5dfc5c72b8ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation": {
+        "n": 20,
+        "value": "5090566682637483446698432134911",
+        "length": 103,
+        "word_sha256": "7217a94768f09b828a08be74533adfa925175ee5b00e3e9ff8a66060b14bb115",
+        "scope": "Recorded table value and raw-decoded structural certificate"
+      }
+    },
+    {
+      "label": "polynomial_n100",
+      "command": [
+        "python3",
+        "code/a351015_polynomial.py",
+        "--n",
+        "100",
+        "--json"
+      ],
+      "working_directory": ".",
+      "started_utc": "2026-10-21T11:03:36.240879+00:00",
+      "returncode": 0,
+      "wall_seconds": 1.1974329161457717,
+      "user_seconds": 1.182287,
+      "system_seconds": 0.010092,
+      "maximum_rss_raw": 20791296,
+      "maximum_rss_raw_unit": "bytes",
+      "maximum_rss_bytes": 20791296,
+      "maximum_rss_mib": 19.828125,
+      "measurement": "One fresh subprocess; os.wait4 child rusage, not cumulative RUSAGE_CHILDREN",
+      "stdout": "validation/results/polynomial_n100.stdout.txt",
+      "stderr": "validation/results/polynomial_n100.stderr.txt",
+      "stdout_sha256": "4d5b4445311f4bee963bb5ae50d71006c3cf9998a2656a23edde5ce450814e73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation": {
+        "n": 100,
+        "value": "186488891974266722356616051004130894370154559789032666343107183526058003524317679644378732631935668658241555370002092289319378141951252794812701137923786911403113453500245594541404925162092574050459322525461925504840331476246601219234509378239996899957266233089580512586207188236216087958975045265288035421920109067998395801410256343118853665063762054526729859417911975669234750019932016042963438663063608769563795800510160749553922252930055061574389226137258651007570386296448246383378431",
+        "length": 1623,
+        "word_sha256": "85f2b5221d628f5904ea54e547a82eafcf6cff17d6f9a57b0a1c0edbe63aeef5",
+        "scope": "Scalability only: raw-decoded structural certificate; no independent minimality check"
+      }
+    },
+    {
+      "label": "python_dp_through16",
+      "command": [
+        "python3",
+        "code/a351015_exact.py",
+        "--max-n",
+        "16"
+      ],
+      "working_directory": ".",
+      "started_utc": "2026-10-21T11:03:37.439364+00:00",
+      "returncode": 0,
+      "wall_seconds": 1.6611205418594182,
+      "user_seconds": 1.61691,
+      "system_seconds": 0.033875999999999996,
+      "maximum_rss_raw": 127238144,
+      "maximum_rss_raw_unit": "bytes",
+      "maximum_rss_bytes": 127238144,
+      "maximum_rss_mib": 121.34375,
+      "measurement": "One fresh subprocess; os.wait4 child rusage, not cumulative RUSAGE_CHILDREN",
+      "stdout": "validation/results/python_dp_through16.stdout.txt",
+      "stderr": "validation/results/python_dp_through16.stderr.txt",
+      "stdout_sha256": "269d874c2f406fed22e9daab6b1eb4c04ce44345d32e7035e1e49918fc9278cd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation": {
+        "n_inclusive": [
+          0,
+          16
+        ],
+        "cases": 17,
+        "method": "Unchanged Python subset DP and its own certificate checks",
+        "status": "passed"
+      }
+    },
+    {
+      "label": "cpp_dp_17_20",
+      "command": [
+        "validation/results/build/a351015_fast"
+      ],
+      "working_directory": ".",
+      "started_utc": "2026-10-21T11:03:39.101275+00:00",
+      "returncode": 0,
+      "wall_seconds": 2.1873263330198824,
+      "user_seconds": 1.495886,
+      "system_seconds": 0.026064999999999998,
+      "maximum_rss_raw": 154550272,
+      "maximum_rss_raw_unit": "bytes",
+      "maximum_rss_bytes": 154550272,
+      "maximum_rss_mib": 147.390625,
+      "measurement": "One fresh subprocess; os.wait4 child rusage, not cumulative RUSAGE_CHILDREN",
+      "stdout": "validation/results/cpp_dp_17_20.stdout.txt",
+      "stderr": "validation/results/cpp_dp_17_20.stderr.txt",
+      "stdout_sha256": "588be77578f9c17c3cd8e10047d0462a80e6ddb2bcb5b5263a25c281b3ed8514",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation": {
+        "n_inclusive": [
+          17,
+          20
+        ],
+        "cases": 4,
+        "records": [
+          {
+            "n": 17,
+            "value": "303421421018735347335039",
+            "length": 79,
+            "word_sha256": "80071c5b46b647b85632ff2da7168a1329b6f8a442d3dcdb7987fd31559e739c"
+          },
+          {
+            "n": 18,
+            "value": "77675883218955741073080191",
+            "length": 87,
+            "word_sha256": "436b4e2e8f86c2515660206ee5194bfd2643cdca7e7c55ca23679bcc62b68bb8"
+          },
+          {
+            "n": 19,
+            "value": "19885026103583920149103476607",
+            "length": 95,
+            "word_sha256": "dfbd9166b8e433cb17eab9581ecd01800ad8c49d47373e4f738f606bc0095a50"
+          },
+          {
+            "n": 20,
+            "value": "5090566682637483446698432134911",
+            "length": 103,
+            "word_sha256": "7217a94768f09b828a08be74533adfa925175ee5b00e3e9ff8a66060b14bb115"
+          }
+        ],
+        "method": "Unchanged specialized q=8 C++ subset DP",
+        "status": "passed"
+      }
+    },
+    {
+      "label": "prefix_verifier_17_20",
+      "command": [
+        "python3",
+        "code/a351015_independent_verify.py",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "working_directory": ".",
+      "started_utc": "2026-10-21T11:03:41.289372+00:00",
+      "returncode": 0,
+      "wall_seconds": 0.037622833624482155,
+      "user_seconds": 0.028995999999999997,
+      "system_seconds": 0.00609,
+      "maximum_rss_raw": 21020672,
+      "maximum_rss_raw_unit": "bytes",
+      "maximum_rss_bytes": 21020672,
+      "maximum_rss_mib": 20.046875,
+      "measurement": "One fresh subprocess; os.wait4 child rusage, not cumulative RUSAGE_CHILDREN",
+      "stdout": "validation/results/prefix_verifier_17_20.stdout.txt",
+      "stderr": "validation/results/prefix_verifier_17_20.stderr.txt",
+      "stdout_sha256": "0818c4446e72e72937db933d62d440f43c9f7ee23321a5fa71bd682744865064",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation": {
+        "n_inclusive": [
+          17,
+          20
+        ],
+        "cases": 4,
+        "status": "passed",
+        "method": "Unchanged prefix automaton with boundary enumeration and recursive label-count completion"
+      }
+    }
+  ],
+  "limits": [
+    "One run per job, including interpreter/process startup and requested output.",
+    "Times depend on host load and are descriptive, not asymptotic evidence.",
+    "Maximum RSS includes interpreter/runtime and process memory; it is not live Python heap size.",
+    "Python DP through16, C++17..20, and verifier17..20 are batch measurements.",
+    "The n=100 result is a scalability/certificate check, not independent numerical minimality verification."
+  ],
+  "independent_validation_sha256": "c1b1b07361e1c28575ebf59077a6ee0456c9c652c6ff2c934f745657aa22c784",
+  "compiler": {
+    "executable": "clang++",
+    "version": "Apple clang version 17.0.0 (clang-1700.6.3.2)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin"
+  },
+  "compilation": {
+    "label": "cpp_build",
+    "command": [
+      "clang++",
+      "-O3",
+      "-std=c++17",
+      "code/a351015_fast_exact.cpp",
+      "-o",
+      "validation/results/build/a351015_fast"
+    ],
+    "working_directory": ".",
+    "started_utc": "2026-10-21T11:03:35.620787+00:00",
+    "returncode": 0,
+    "wall_seconds": 0.5832089586183429,
+    "user_seconds": 0.305591,
+    "system_seconds": 0.182306,
+    "maximum_rss_raw": 117440512,
+    "maximum_rss_raw_unit": "bytes",
+    "maximum_rss_bytes": 117440512,
+    "maximum_rss_mib": 112.0,
+    "measurement": "One fresh subprocess; os.wait4 child rusage, not cumulative RUSAGE_CHILDREN",
+    "stdout": "validation/results/cpp_build.stdout.txt",
+    "stderr": "validation/results/cpp_build.stderr.txt",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "compiled_binary_sha256": "e518851d702b0027015ce9fb2213c56c1002d2b4642fc388d4abbc8bbbba20a0",
+  "elapsed_seconds": 5.7766112089157104,
+  "finished_utc": "2026-10-21T11:03:41.327412+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "started_utc": "2026-10-21T11:04:08Z",
+  "invocation": "python3 validation/oct21/run_independent.py --max-n 120 --exact-max-n 20 --exhaustive-max-n 6",
+  "cwd": ".",
+  "path_convention": "Commands use package-relative paths and python3 as the runtime alias; host.python records the actual runtime version.",
+  "manuscript_sha256_used_to_implement": "3fe9161f286bca488a62ad72254820e545d715bfa8c8e0b473cfab6173f15b74",
+  "source_sha256": {
+    "code/a351015_polynomial.py": "4b5a96c6349fc599c54baffe50037a93bf024c0be9ee7fca1096a4df9f9d92f4",
+    "validation/oct21/independent_prefix.py": "792c13925493d3f6e4074869af1881e97ef4dc660de874b8e86aae234dc58bb6",
+    "validation/oct21/run_independent.py": "41d958faaeebcfedfe07003c4774a9bfd1adce332872147dd35e127bcf3aed6b"
+  },
+  "host": {
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "python_executable_alias": "python3",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "system": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64",
+    "cpu_count": 10,
+    "hardware_queries": [
+      {
+        "command": "/usr/sbin/sysctl -n machdep.cpu.brand_string",
+        "returncode": 0,
+        "stdout": "Apple M4\n",
+        "stderr": ""
+      },
+      {
+        "command": "/usr/sbin/sysctl -n hw.model",
+        "returncode": 0,
+        "stdout": "Mac16,12\n",
+        "stderr": ""
+      },
+      {
+        "command": "/usr/sbin/sysctl -n hw.memsize",
+        "returncode": 0,
+        "stdout": "17179869184\n",
+        "stderr": ""
+      },
+      {
+        "command": "/usr/sbin/sysctl -n hw.physicalcpu",
+        "returncode": 0,
+        "stdout": "10\n",
+        "stderr": ""
+      },
+      {
+        "command": "/usr/sbin/sysctl -n hw.logicalcpu",
+        "returncode": 0,
+        "stdout": "10\n",
+        "stderr": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "event": "Independent polynomial implementation completed and checked against manuscript small examples before reading/importing producer code",
+  "created_utc": "2026-10-21T11:00:23Z",
+  "source": "Revised Paper/validation/oct21/independent_prefix.py",
+  "source_sha256": "792c13925493d3f6e4074869af1881e97ef4dc660de874b8e86aae234dc58bb6",
+  "manuscript_sha256_read": "3fe9161f286bca488a62ad72254820e545d715bfa8c8e0b473cfab6173f15b74",
+  "n_0_through_10": [
+    0,
+    1,
+    5,
+    27,
+    155,
+    1655,
+    18039,
+    281975,
+    4617711,
+    138835439,
+    4503885791
+  ],
+  "elapsed_seconds": 0.0007460000924766064,
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "independence_scope": "separate implementation of the same manuscript algorithm and lemmas; not independent mathematical proof"
+}

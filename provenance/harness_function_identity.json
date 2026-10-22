@@ -1,0 +1,110 @@
+{
+  "description": "Exact source comparison of each top-level function in the original local and release-adapted harnesses. Diff files document every changed line; file hashes bind module-level changes too.",
+  "checks": [
+    {
+      "release_path": "validation/validate_revision.py",
+      "original_sha256": "c8210c5306703d4282432609486ccdc1e100dda436e0359fd6a62ef09942616c",
+      "release_sha256": "93c410dcdbc9821feef355fa4fdcdfae584593e72d83d5409d6e2cc7165781c3",
+      "byte_identical_functions": [
+        "brute_labels",
+        "brute_lower_bound",
+        "check_boundary_counts",
+        "check_input_edges",
+        "check_old_prefix_verifier",
+        "check_old_python_dp",
+        "check_raises",
+        "check_raw_first_occurrences",
+        "check_raw_prefix_languages",
+        "check_suffix_counts",
+        "check_table_and_certificates",
+        "load_module",
+        "raw_runs",
+        "require",
+        "run_count",
+        "sha256"
+      ],
+      "changed_functions": [
+        "main"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "adaptation_diff": "provenance/validation__validate_revision.py.patch"
+    },
+    {
+      "release_path": "validation/benchmark_revision.py",
+      "original_sha256": "a8950f4e8a33fd3628b58e49697a87013b27e9ab4584526078ed701a676bd3e8",
+      "release_sha256": "5b9afda337ee9f890d1f941a23e5e45ec74de66761dc5835ce60539683cee145",
+      "byte_identical_functions": [
+        "certificate",
+        "read_cpu_information",
+        "stdout_of",
+        "verify_cpp_output",
+        "verify_polynomial_output",
+        "verify_prefix_output",
+        "verify_python_dp_output"
+      ],
+      "changed_functions": [
+        "main",
+        "measured_process"
+      ],
+      "added_functions": [
+        "portable_command"
+      ],
+      "removed_functions": [],
+      "adaptation_diff": "provenance/validation__benchmark_revision.py.patch"
+    },
+    {
+      "release_path": "validation/second_audit/audit_code.py",
+      "original_sha256": "35e88a4b1f504acb42d9110d6a2fae6be5c17431f8087e48cf260e497f19968e",
+      "release_sha256": "46513bee023c450e9171b76a433f262092acbf689a1994e396964210ea03ee5c",
+      "byte_identical_functions": [
+        "check_boundary_formula",
+        "check_edges_and_decimal",
+        "check_larger_prefixes",
+        "check_raw_languages",
+        "check_wait4",
+        "digest",
+        "load",
+        "old_prefix_feasible",
+        "raw_runs_integer",
+        "rectangular_costs",
+        "require",
+        "schedule_labels"
+      ],
+      "changed_functions": [
+        "check_harness_controls",
+        "check_runtime_and_cli",
+        "main"
+      ],
+      "added_functions": [],
+      "removed_functions": [
+        "check_historical_evidence"
+      ],
+      "adaptation_diff": "provenance/validation__second_audit__audit_code.py.patch"
+    },
+    {
+      "release_path": "validation/oct21/run_independent.py",
+      "original_sha256": "a9b7bb998051a95287283e53e48d77ac95cfd2d4275a94a2a543a2200465c13c",
+      "release_sha256": "41d958faaeebcfedfe07003c4774a9bfd1adce332872147dd35e127bcf3aed6b",
+      "byte_identical_functions": [
+        "definition_checks",
+        "definition_runs",
+        "dp_example",
+        "dump",
+        "exact_search",
+        "exact_type_language_minimum",
+        "file_hash",
+        "generate_independent",
+        "independently_enumerated_type_sets"
+      ],
+      "changed_functions": [
+        "compare_producer",
+        "host_report",
+        "main"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "adaptation_diff": "provenance/validation__oct21__run_independent.py.patch"
+    }
+  ]
+}

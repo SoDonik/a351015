@@ -1,0 +1,21 @@
+a(17) = 303421421018735347335039
+  PASS: positive certificate has 17 distinct runs; length 79 is the cost lower bound
+  PASS: at 42 target-1 positions, no lexicographically-smaller 0-alternative had a completion
+  prefix states: max 20; visited 338; completion states 148; label-count states 508
+  terminal parses: 1; time 0.001 s
+a(18) = 77675883218955741073080191
+  PASS: positive certificate has 18 distinct runs; length 87 is the cost lower bound
+  PASS: at 44 target-1 positions, no lexicographically-smaller 0-alternative had a completion
+  prefix states: max 20; visited 399; completion states 186; label-count states 514
+  terminal parses: 1; time 0.001 s
+a(19) = 19885026103583920149103476607
+  PASS: positive certificate has 19 distinct runs; length 95 is the cost lower bound
+  PASS: at 48 target-1 positions, no lexicographically-smaller 0-alternative had a completion
+  prefix states: max 20; visited 458; completion states 221; label-count states 281
+  terminal parses: 1; time 0.001 s
+a(20) = 5090566682637483446698432134911
+  PASS: positive certificate has 20 distinct runs; length 103 is the cost lower bound
+  PASS: at 56 target-1 positions, no lexicographically-smaller 0-alternative had a completion
+  prefix states: max 20; visited 483; completion states 219; label-count states 220
+  terminal parses: 1; time 0.001 s
+All independent prefix audits passed in 0.003 s.
